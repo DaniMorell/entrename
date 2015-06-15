@@ -7,7 +7,7 @@ var sessionController = require('../controllers/session_controller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Entrena Me', errors: []});
+  res.render('index', { title: 'Entrena Me!', errors: []});
 });
 
 router.param('entreneId', misentrenescontroller.load);  // autoload :misentrenesId
