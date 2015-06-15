@@ -2,14 +2,7 @@ var models = require('../models/models.js');
 
 // Autoload :id
 exports.load = function(req, res, next, entreneId) {
-  models.Entrene.find({
-            where: {
-                id: Number(entreneId)
-            },
-            include: [{
-                model: models.Comment
-            }]
-        }).then(function(entrene) {
+  models.Entrene.find(entreneId).then(function(entrene) {
       if (entrene) {
         req.entrene = entrene;
         next();
@@ -42,7 +35,11 @@ exports.new = function(req, res) {
 exports.create = function(req, res) {
   var entrene = models.Entrene.build( req.body.entrene );
 
-  entrene
+  entrene.save({fields: ["entrenamiento"]}).then (function(){
+  	res.redirect('/entrenes/entrene');
+  })
+
+  /*entrene
   .validate()
   .then(
     function(err){
@@ -54,7 +51,7 @@ exports.create = function(req, res) {
         .then( function(){ res.redirect('/entrenes/entrene')}) 
       }      // res.redirect: Redirección HTTP a lista de preguntas
     }
-  );
+  );*/
 };
 
 // GET /entrenes/:id/edit
@@ -69,7 +66,11 @@ exports.update = function(req, res) {
 
   req.entrene.entrenamiento  = req.body.entrene.entrenamiento;
 
-  req.entrene
+  req.entrene.save({fields: ["entrenamiento"]}).then (function(){
+    res.redirect('/entrenes/entrene');
+  })
+
+  /*req.entrene
   .validate()
   .then(
     function(err){
@@ -81,12 +82,12 @@ exports.update = function(req, res) {
         .then( function(){ res.redirect('/entrenes/entrene');});
       }     // Redirección HTTP a lista de preguntas (URL relativo)
     }
-  );
+  );*/
 };
 
 // DELETE /quizes/:id
 exports.destroy = function(req, res) {
   req.entrene.destroy().then( function() {
-    res.redirect('/entrenes');
+    res.redirect('/entrenes/entrene');
   }).catch(function(error){next(error)});
 };
