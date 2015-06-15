@@ -1,0 +1,19 @@
+<form method="get" action="/entrenes/<%= misentrenes.id %>">
+    <%=misentrenes.entrenamiento%>
+        <p>
+</form>
+
+
+<p>
+    <a href="/entrenes/<%=misentrenes.id%>/comments/new">
+        <button>Nuevo Comentario</button>
+    </a>
+</p>
+
+<p><strong>Comentarios:</strong>
+</p>
+<%for(index in misentrenes.Comments){%>
+    <p>-
+        <%=misentrenes.Comments[index].texto%>
+    </p>
+    <%}%>
