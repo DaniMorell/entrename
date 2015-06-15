@@ -1,3 +1,7 @@
+var models = require('../models/models.js');
+
 exports.entrene = function(req, res){
-	res.render('entrenes/entrene', {entrene: 'Entrene Nº 1'});
+	models.Entrene.findAll().success(function(misentrenes) {
+		res.render('entrenes/entrene', {entrenamiento: misentrenes[0].entrenamiento});
+	})	
 };
