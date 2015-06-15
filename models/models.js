@@ -33,15 +33,15 @@ var entrene_path = path.join(__dirname,'entrenes');
 var Entrene = sequelize.import(entrene_path);
 
 // Importar definicion de la tabla Comment
-/*var comment_path = path.join(__dirname,'comment');
+var comment_path = path.join(__dirname,'comment');
 var Comment = sequelize.import(comment_path);
 
 Comment.belongsTo(Entrene);
-Entrene.hasMany(Comment);*/
+Entrene.hasMany(Comment);
 
 // exportar tablas
 exports.Entrene = Entrene;
-//exports.Comment = Comment; 
+exports.Comment = Comment; 
 
 // sequelize.sync() inicializa tabla de preguntas en DB
 sequelize.sync().then(function() {

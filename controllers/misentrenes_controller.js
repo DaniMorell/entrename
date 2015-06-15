@@ -2,7 +2,14 @@ var models = require('../models/models.js');
 
 // Autoload :id
 exports.load = function(req, res, next, entreneId) {
-  models.Entrene.find(entreneId).then(function(entrene) {
+  models.Entrene.find({
+            where: {
+                id: Number(entreneId)
+            },
+            include: [{
+                model: models.Comment
+            }]
+        }).then(function(entrene) {
       if (entrene) {
         req.entrene = entrene;
         next();

@@ -5,5 +5,17 @@
         <p>
 </form>
 
+<p>
+    <a href="/entrenes/<%=entrene.id%>/comments/new">
+        <button>Nuevo Comentario</button>
+    </a>
+</p>
 
+<p><strong>Comentarios:</strong>
+</p>
+<%for(index in entrene.comments){%>
+    <p>-
+        <%=entrene.comments[index].texto%>
+    </p>
+    <%}%>
 
