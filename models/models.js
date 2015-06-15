@@ -47,7 +47,7 @@ exports.Entrene = Entrene;
 sequelize.sync().then(function() {
 	Entrene.count().then(function (count){
 	  if(count === 0) {   // la tabla se inicializa solo si está vacía
-		Entrene.create({entrenamiento: 'Entrenamiento Nº1'})
+		Entrene.create({titulo: 'Titulo 1', entrenamiento: 'Entrenamiento Nº1'})
 		.then(function(){console.log('Base de datos (tabla entrenes) inicializada')});
 	  };
 	});
