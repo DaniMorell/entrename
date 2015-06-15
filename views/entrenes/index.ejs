@@ -1,22 +1,23 @@
 <table>
   <% var i; for (i=0; i < entrene.length; i++) { %>
     <tr>
-        <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>    
-        <td><a href="/entrenes/<%=entrene[i].id%>/edit"><button>Editar</button></a></td>
-        <td>
-            <form method="post" action="/entrenes/<%= entrene[i].id %>?_method=delete">
-                <button type="submit" onclick="return confirm('Borrar: <%= entrene[i].titulo %>');">Borrar</button>
-
-            </form>
-
-
+        <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
+        <%if (session.user){%>    
+            <td><a href="/entrenes/<%=entrene[i].id%>/edit"><button>Editar</button></a></td>
+            <td>
+                <form method="post" action="/entrenes/<%= entrene[i].id %>?_method=delete">
+                    <button type="submit" onclick="return confirm('Borrar: <%= entrene[i].titulo %>');">Borrar</button>
+                </form>
             </td>
+        <% } %>
     </tr>
   <% } %>
 </table>
+<p/>
 
-
-<a href="/entrenes/new"><button type="button">Crear Entrenamiento</button></a>
+<%if (session.user){%>
+    <a href="/entrenes/new"><button type="button">Crear Entrenamiento</button></a>
+<% } %>
 
 
 
