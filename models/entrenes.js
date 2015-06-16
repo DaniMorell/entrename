@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       fecha: {
         type: DataTypes.STRING,
         validate: { notEmpty: {msg: "-> Falta Fecha"}}
-      }      
+      }    
     }
   );
 }
