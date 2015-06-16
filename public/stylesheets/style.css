@@ -15,7 +15,6 @@ nav span             { margin: 0px 10px 0px 0px;}
 input{padding:5px; border:2px solid #ccc; 
 -webkit-border-radius: 5px;
 border-radius: 5px;
-width: 400px;
 }
 input:focus {border-color:#333; }
 
@@ -45,4 +44,8 @@ textarea:focus {border-color:#333; }
 
 .labent{
 	margin-left: -70px;
+}
+
+#caj{
+	width: 400px;
 }
