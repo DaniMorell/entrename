@@ -4,11 +4,21 @@ body             { background: #333; }
 
 h2 span, section h3 { display: none; }
 body                { font-size: xx-large; }
-footer, input       { font-size: large; }
+footer, input       { font-size: large; font: 12px Georgia, serif;}
 
-button {
-  color: #900;
-  font-weight: bold;
-  font-size: 80%;
-  text-transform: uppercase;
+input{padding:5px; border:2px solid #ccc; 
+-webkit-border-radius: 5px;
+border-radius: 5px;
 }
+input:focus {border-color:#333; }
+
+button {padding:5px 15px; background:#ccc; border:0 none;
+cursor:pointer;
+-webkit-border-radius: 5px;
+border-radius: 5px; }
+
+textarea{padding:5px; border:2px solid #ccc; 
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+textarea:focus {border-color:#333; }
