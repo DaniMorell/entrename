@@ -23,6 +23,6 @@ border-radius: 5px;
 }
 textarea:focus {border-color:#333; }
 
-@media all and (orientation:landscape) {
+@media all and (orientation:portrait) {
    [styles for landscape orientation]
 }
