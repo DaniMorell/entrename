@@ -10,7 +10,11 @@ module.exports = function(sequelize, DataTypes) {
       entrenamiento: {
         type: DataTypes.STRING,
         validate: { notEmpty: {msg: "-> Falta entrenamiento"}}
-      }	  
+      },
+      fecha: {
+        type: DataTypes.STRING,
+        validate: { notEmpty: {msg: "-> Falta Fecha"}}
+      }      
     }
   );
 }

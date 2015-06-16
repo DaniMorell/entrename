@@ -3,6 +3,8 @@
     <tr>
         <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
         <td>&nbsp; &nbsp</td>
+        <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].fecha %> </a></td>
+        <td>&nbsp; &nbsp</td>
         <%if (session.user){%>    
             <td><a href="/entrenes/<%=entrene[i].id%>/edit"><button>Editar</button></a></td>
             <td>&nbsp</td>

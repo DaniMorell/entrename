@@ -1,8 +1,9 @@
 <form method="get" action="/entrenes/<%= entrene.id %>">
     <h1><%=entrene.titulo%></h1>
-        <p><br>
-    <%=entrene.entrenamiento%>
-        <p>
+    <p><strong><%=entrene.fecha%></strong>
+    <p><br>
+    <textarea readonly id="entrenamiento"><%=entrene.entrenamiento%></textarea>
+    <p>
 </form>
 <br>
 <p>

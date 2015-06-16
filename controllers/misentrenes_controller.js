@@ -32,7 +32,7 @@ exports.show = function(req, res) {
 // GET /quizes/new
 exports.new = function(req, res) {
   var entrene = models.Entrene.build( // crea objeto quiz 
-    {titulo: "", entrenamiento: ""}
+    {titulo: "", entrenamiento: "", fecha: ""}
   );
 
   res.render('entrenes/new', {entrene: entrene, errors: []});
@@ -42,7 +42,7 @@ exports.new = function(req, res) {
 exports.create = function(req, res) {
   var entrene = models.Entrene.build( req.body.entrene );
 
-  entrene.save({fields: ["titulo","entrenamiento"]}).then (function(){
+  entrene.save({fields: ["titulo","entrenamiento","fecha"]}).then (function(){
   	res.redirect('/entrenes/entrene');
   })
 
@@ -73,7 +73,7 @@ exports.update = function(req, res) {
 
   req.entrene.entrenamiento  = req.body.entrene.entrenamiento;
 
-  req.entrene.save({fields: ["titulo", "entrenamiento"]}).then (function(){
+  req.entrene.save({fields: ["titulo", "entrenamiento","fecha"]}).then (function(){
     res.redirect('/entrenes/entrene');
   })
 
