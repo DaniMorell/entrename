@@ -49,3 +49,7 @@ textarea:focus {border-color:#333; }
 #caj{
 	width: 400px;
 }
+
+#logo{
+	margin-left: -70px;
+}
