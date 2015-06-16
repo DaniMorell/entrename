@@ -15,6 +15,7 @@ nav span             { margin: 0px 10px 0px 0px;}
 input{padding:5px; border:2px solid #ccc; 
 -webkit-border-radius: 5px;
 border-radius: 5px;
+width: 400px;
 }
 input:focus {border-color:#333; }
 
@@ -26,5 +27,22 @@ border-radius: 5px; }
 textarea{padding:5px; border:2px solid #ccc; 
 -webkit-border-radius: 5px;
 border-radius: 5px;
+width: 400px;
+height: 100px;
 }
 textarea:focus {border-color:#333; }
+
+
+#f1 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.labent{
+	margin-left: -70px;
+}

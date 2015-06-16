@@ -32,7 +32,7 @@ exports.show = function(req, res) {
 // GET /quizes/new
 exports.new = function(req, res) {
   var entrene = models.Entrene.build( // crea objeto quiz 
-    {titulo: "Titulo", entrenamiento: "Entrenamiento"}
+    {titulo: "", entrenamiento: ""}
   );
 
   res.render('entrenes/new', {entrene: entrene, errors: []});
