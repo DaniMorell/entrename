@@ -2,8 +2,10 @@
   <% var i; for (i=0; i < entrene.length; i++) { %>
     <tr>
         <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
+        <td>&nbsp; &nbsp</td>
         <%if (session.user){%>    
             <td><a href="/entrenes/<%=entrene[i].id%>/edit"><button>Editar</button></a></td>
+            <td>&nbsp</td>
             <td>
                 <form method="post" action="/entrenes/<%= entrene[i].id %>?_method=delete">
                     <button type="submit" onclick="return confirm('Borrar: <%= entrene[i].titulo %>');">Borrar</button>
