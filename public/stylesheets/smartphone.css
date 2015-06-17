@@ -3,7 +3,7 @@ body             { background: #333; }
 #page-wrap:after { content: "Smartphone Layout"; }
 
 h2 span, section h3 { display: none; }
-body                { font-size: 20px; }
+body                { font-size: 200px; }
 footer, input       { font-size: large; font: 12px Georgia, serif;}
 
 input{padding:5px; border:2px solid #ccc; 
