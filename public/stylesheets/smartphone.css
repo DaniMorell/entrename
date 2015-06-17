@@ -22,3 +22,7 @@ textarea{padding:5px; border:2px solid #ccc;
 border-radius: 5px;
 }
 textarea:focus {border-color:#333; }
+
+#enlace{
+	font-size: xx-large;
+}

@@ -1,9 +1,9 @@
 <table>
   <% var i; for (i=0; i < entrene.length; i++) { %>
     <tr>
-        <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
+        <td id="enlace"><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
         <td>&nbsp; &nbsp</td>
-        <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].fecha %> </a></td>
+        <td id="enlace"><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].fecha %> </a></td>
         <td>&nbsp; &nbsp</td>
         <td><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].acabado %> </a></td>
         <%if (session.user){%>    
