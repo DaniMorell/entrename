@@ -32,7 +32,7 @@ height: 100px;
 textarea:focus {border-color:#333; }
 
 
-#f1 {
+/*#f1 {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -40,6 +40,10 @@ textarea:focus {border-color:#333; }
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+}*/
+
+#foot{
+  font-size: 10px;
 }
 
 .labent{
