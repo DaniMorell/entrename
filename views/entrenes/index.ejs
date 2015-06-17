@@ -1,4 +1,18 @@
 <table>
+    <tr align="center">
+        <td>
+            <%if (session.user){%>
+                <a href="/entrenes/new"><button type="button">Crear Entrenamiento</button></a>
+            <% } %>
+        </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+</table>
+
+<table>
   <% var i; for (i=0; i < entrene.length; i++) { %>
     <tr>
         <td id="enlace"><a href="/entrenes/<%= entrene[i].id %>"><%= entrene[i].titulo %> </a></td>
@@ -20,9 +34,6 @@
 </table>
 <p/>
 
-<%if (session.user){%>
-    <a href="/entrenes/new"><button type="button">Crear Entrenamiento</button></a>
-<% } %>
 
 
 
