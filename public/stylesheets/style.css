@@ -1,11 +1,11 @@
 *                    { margin: 0; padding: 0; }
-body                 { font: 22px Georgia, serif; }
+body                 { font: 24px Georgia, serif; }
 
 #page-wrap           { margin: 2% auto; color: white; }
 #page-wrap > .main   { border: 1px solid #999; padding: 1%; 
 	                   margin-bottom: 1px; color: black;}
 
-section > div        { padding: 20px; }
+section > div        { padding: 22px; }
 header, nav, section { background: #eee; text-align: center;}
 footer               { background: #eee; text-align: center; font: 12px Georgia, serif;}
 nav span             { margin: 0px 10px 0px 0px;}
@@ -15,7 +15,7 @@ nav span             { margin: 0px 10px 0px 0px;}
 input{padding:5px; border:2px solid #ccc; 
 -webkit-border-radius: 5px;
 border-radius: 5px;
-font-size: 18px;
+font-size: 20px;
 }
 input:focus {border-color:#333; }
 
@@ -29,9 +29,9 @@ font-size: 20px;
 textarea{padding:5px; border:2px solid #ccc; 
 -webkit-border-radius: 5px;
 border-radius: 5px;
-width: 500px;
-height: 200px;
-font-size: 18px;
+width: 700px;
+height: 300px;
+font-size: 20px;
 }
 textarea:focus {border-color:#333; }
 
