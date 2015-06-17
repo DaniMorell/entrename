@@ -22,7 +22,7 @@ button {padding:5px 15px; background:#ccc; border:0 none;
 cursor:pointer;
 -webkit-border-radius: 5px;
 border-radius: 5px; 
-font-size: 20px;
+font-size: 18px;
 }
 
 textarea{padding:5px; border:2px solid #ccc; 
