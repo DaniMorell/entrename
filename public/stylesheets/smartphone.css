@@ -3,7 +3,7 @@ body             { background: #333; }
 #page-wrap:after { content: "Smartphone Layout"; }
 
 h2 span, section h3 { display: none; }
-body                { font-size: xx-large; ; font: 120px Georgia, serif;}
+body                { font-size: xx-large; }
 footer, input       { font-size: large; font: 12px Georgia, serif;}
 
 input{padding:5px; border:2px solid #ccc; 
@@ -23,6 +23,4 @@ border-radius: 5px;
 }
 textarea:focus {border-color:#333; }
 
-#enlace{
-	font-size: xx-large;
-}
+
