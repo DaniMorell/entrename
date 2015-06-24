@@ -72,6 +72,8 @@ exports.edit = function(req, res) {
 exports.update = function(req, res) {
 
   req.entrene.entrenamiento  = req.body.entrene.entrenamiento;
+  req.entrene.titulo  = req.body.entrene.titulo;
+  req.entrene.fecha  = req.body.entrene.fecha;
 
   req.entrene.save({fields: ["titulo", "entrenamiento","fecha"]}).then (function(){
     res.redirect('/entrenes/entrene');
